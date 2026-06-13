@@ -2,7 +2,7 @@
 
 自动同步腾讯 ima 官方 [ima-skill](https://ima.qq.com/agent-interface)
 
-将此仓库添加到 [cc-switch]([farion1231/cc-switch: A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode, OpenClaw, Gemini CLI & Hermes Agent. Only official website: ccswitch.io](https://github.com/farion1231/cc-switch)) 的技能仓库配置中，即可自动获取最新版本的 `ima-skill`，无需手动下载。
+将此仓库添加到 [cc-switch](https://github.com/farion1231/cc-switch) 的技能仓库配置中，即可自动获取最新版本的 `ima-skill`，无需手动下载。
 
 ## 工作原理
 
