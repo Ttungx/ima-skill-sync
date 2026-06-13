@@ -47,11 +47,13 @@ jobs:
           mkdir -p /tmp/extracted
           unzip -o /tmp/download.zip -d /tmp/extracted/
 
-          # 4c. 使用 rsync 增量更新 ima-skill/ 目录
+          # 4c. 使用 rsync 增量更新 skills/ima-skill/ 目录
+          #     Claude Code / CCS 约定：skill 必须位于 skills/<name>/ 下
           #     -a: archive mode（保留权限、时间戳等）
           #     --delete: 删除目标中有但源中没有的文件
           #     只复制有差异的文件，避免 git 全量重写
-          rsync -a --delete /tmp/extracted/ima-skill/ ./ima-skill/
+          mkdir -p skills
+          rsync -a --delete /tmp/extracted/ima-skill/ ./skills/ima-skill/
 
       # 5. 提取版本号（从文件名 ima-skills-{version}.zip）
       - name: Extract version
@@ -68,7 +70,7 @@ jobs:
         run: |
           git config user.name "ima-skill-sync[bot]"
           git config user.email "bot@ima-skill-sync"
-          git add raw/ ima-skill/
+          git add -A raw/ skills/
           git diff --cached --quiet || \
             git commit -m "sync ima-skill v${{ steps.version.outputs.version }} ($(date +%Y-%m-%d))"
           git push

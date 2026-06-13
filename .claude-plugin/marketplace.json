@@ -1,0 +1,21 @@
+{
+  "name": "ima-skill-sync",
+  "owner": {
+    "name": "Ttungx"
+  },
+  "metadata": {
+    "description": "IMA OpenAPI skill — unified note management and knowledge base operations",
+    "version": "1.1.7"
+  },
+  "plugins": [
+    {
+      "name": "ima-skill",
+      "description": "Unified IMA OpenAPI skill for note management and knowledge base operations (upload files/web pages to a knowledge base, knowledge search, create/edit/search notes).",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/ima-skill"
+      ]
+    }
+  ]
+}
