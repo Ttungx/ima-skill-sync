@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # 1. 检出仓库
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       # 2. 下载官方 zip
       - name: Download official zip
