@@ -6,6 +6,6 @@
 
 ## 工作原理
 
-- GitHub Actions 每 2 天自动执行一次同步工作流（也支持 `workflow_dispatch` 手动触发）
+- GitHub Actions 每 5 天自动执行一次同步工作流（也支持 `workflow_dispatch` 手动触发）
 - 下载官方 zip → 校验 SHA256 → 如有变更则更新仓库并发布 GitHub Release
 - 仓库中的 `ima-skill/` 目录即 opencode 实际加载的技能载荷
